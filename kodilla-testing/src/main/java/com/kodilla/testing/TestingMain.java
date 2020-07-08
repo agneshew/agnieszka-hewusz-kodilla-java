@@ -4,21 +4,17 @@ import com.kodilla.testing.calculator.Calculator;
 
 public class TestingMain {
     public static void main(String[] args){
-        Calculator myCalculator = new Calculator (5,10);
+        Calculator myCalculator = new Calculator();
 
-        int resultAdd = myCalculator.addAToB();
+        int resultAdd = myCalculator.addAToB(10, 5);
+        int resultSubtract = myCalculator.subtractAFromB(10, 5);
 
-        if (resultAdd == (5+10)){
-            System.out.println("Add - test OK");
-        } else {
-            System.out.println("Add - Error!");
+
+        if ((resultAdd == (10 + 5)) && (resultSubtract == (10 - 5))){
+            System.out.println("test OK");
         }
-        int resultSubtract = myCalculator.subtractAFromB();
-
-        if (resultSubtract == (5-10)){
-            System.out.println("Subtract - test OK");
-        } else {
-            System.out.println("Subtract - Error!");
+        else {
+            System.out.println("Error!");
         }
     }
 }
