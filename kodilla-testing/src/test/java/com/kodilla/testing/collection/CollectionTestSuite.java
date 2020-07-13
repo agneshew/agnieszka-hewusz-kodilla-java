@@ -20,30 +20,28 @@ public class CollectionTestSuite {
         @Test
     public void testOddNumbersExterminatorEmptyList (){
         //Given
-
             ArrayList <Integer> numbers = new ArrayList<>();
-            ArrayList <Integer> numbersExOdd = new ArrayList<>();
+            ArrayList <Integer> numbersExOdd;
             //When
-            OddNumbersExterminator.exterminate(numbers, numbersExOdd);
-            int x = numbersExOdd.size();
+            numbersExOdd = OddNumbersExterminator.exterminate(numbers);
             //Then
-            Assert.assertEquals(numbersExOdd.size(), 2);
+            Assert.assertEquals(numbersExOdd.size(), 0);
         }
     @Test
     public void testOddNumbersExterminatorNormalList () {
         //Given
         ArrayList <Integer> numbers = new ArrayList<>();
-        ArrayList <Integer> numbersExOdd = new ArrayList<>();
+        ArrayList <Integer> numbersExOdd;
 
-        numbers.add(0,1);
-        numbers.add(0,2);
-        numbers.add(0,3);
-        numbers.add(0,4);
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(3);
+        numbers.add(4);
+        numbers.add(5);
         //When
-        OddNumbersExterminator.exterminate(numbers, numbersExOdd);
-        int x = numbersExOdd.size();
+        numbersExOdd = OddNumbersExterminator.exterminate(numbers);
         //Then
-        Assert.assertEquals(numbersExOdd.size(), 2);
+        Assert.assertEquals(numbersExOdd.size(), 3);
     }
 }
 
