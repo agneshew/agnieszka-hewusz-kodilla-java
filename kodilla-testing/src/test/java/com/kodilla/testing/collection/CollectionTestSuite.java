@@ -22,25 +22,28 @@ public class CollectionTestSuite {
         //Given
 
             ArrayList <Integer> numbers = new ArrayList<>();
+            ArrayList <Integer> numbersExOdd = new ArrayList<>();
             //When
-            OddNumbersExterminator.exterminate(numbers);
-            int x = numbers.size();
+            OddNumbersExterminator.exterminate(numbers, numbersExOdd);
+            int x = numbersExOdd.size();
             //Then
-            Assert.assertEquals(numbers.size(), 2);
+            Assert.assertEquals(numbersExOdd.size(), 2);
         }
     @Test
     public void testOddNumbersExterminatorNormalList () {
         //Given
         ArrayList <Integer> numbers = new ArrayList<>();
+        ArrayList <Integer> numbersExOdd = new ArrayList<>();
+
         numbers.add(0,1);
         numbers.add(0,2);
         numbers.add(0,3);
         numbers.add(0,4);
         //When
-        OddNumbersExterminator.exterminate(numbers);
-        int x = numbers.size();
+        OddNumbersExterminator.exterminate(numbers, numbersExOdd);
+        int x = numbersExOdd.size();
         //Then
-        Assert.assertEquals(numbers.size(), 2);
+        Assert.assertEquals(numbersExOdd.size(), 2);
     }
 }
 
