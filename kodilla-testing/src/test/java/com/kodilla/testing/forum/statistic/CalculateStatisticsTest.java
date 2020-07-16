@@ -7,6 +7,7 @@ import org.junit.Test;
 import java.util.List;
 
 import static java.lang.Double.NaN;
+import static java.lang.Double.isNaN;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -24,9 +25,32 @@ public class CalculateStatisticsTest {
         //When
         calculateStatistics.calculateAdvStatistics(statisticsMock);
         //Then
-        Assert.assertEquals(NaN, calculateStatistics.avNumberOfPostsPerUser, 0);
-        Assert.assertEquals(NaN, calculateStatistics.avNumberOfCommentsPerPost, 0);
-        Assert.assertEquals(NaN, calculateStatistics.avNumberOfCommentsPerUser, 0);
+        double avppu = 0;
+        if (isNaN(calculateStatistics.avNumberOfPostsPerUser)) {
+            avppu= (double) 0;
+        }
+        else {
+            avppu = calculateStatistics.avNumberOfPostsPerUser;
+        }
+        Assert.assertEquals(0, avppu, 0);
+
+        double avcpp = 0;
+        if (isNaN(calculateStatistics.avNumberOfCommentsPerPost)) {
+            avcpp= (double) 0;
+        }
+        else {
+            avcpp = calculateStatistics.avNumberOfCommentsPerPost;
+        }
+        Assert.assertEquals(0, avcpp, 0);
+
+        double avcpu = 0;
+        if (isNaN(calculateStatistics.avNumberOfCommentsPerUser)) {
+            avcpu= (double) 0;
+        }
+        else {
+            avcpu = calculateStatistics.avNumberOfCommentsPerUser;
+        }
+        Assert.assertEquals(0, avcpu, 0);
     }
     @Test
     public void testCalculateAdvStatistics2() {
