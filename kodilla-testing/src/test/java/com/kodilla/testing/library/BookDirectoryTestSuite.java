@@ -1,13 +1,11 @@
 package com.kodilla.testing.library;
 
-import jdk.nashorn.api.tree.LoopTree;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.*;
 
@@ -89,30 +87,48 @@ public class BookDirectoryTestSuite {
         return resultHandList;
     }
     @Test
-    public void testListBooksInHandsOfCondition() {
+    public void testListBooksInHandsOfConditionZero() {
         //Given
         BookLibrary bookLibraryMock = mock(BookLibrary.class);
-        LibraryUser libraryUser0 = new LibraryUser("John", "Smith", "2345");
-        LibraryUser libraryUser1 = new LibraryUser("John", "Smith", "2345");
-        LibraryUser libraryUser5 = new LibraryUser("John", "Smith", "2345");
-        bookLibraryMock.listBooksInHandsOf(libraryUser0);
-        bookLibraryMock.listBooksInHandsOf(libraryUser1);
-        bookLibraryMock.listBooksInHandsOf(libraryUser5);
+        LibraryUser libraryUser = new LibraryUser("John", "Smith", "2345");
+        bookLibraryMock.listBooksInHandsOf(libraryUser);
 
-        List<Book> bookInHands0List = new ArrayList<Book>();
-        List<Book> bookInHands1List = generateListNBooksInHands(1);
-        List<Book> bookInHands5List = generateListNBooksInHands(5);
-
-        when(bookLibraryMock.listBooksInHandsOf(libraryUser0)).thenReturn(bookInHands0List);
-        when(bookLibraryMock.listBooksInHandsOf(libraryUser1)).thenReturn(bookInHands1List);
-        when(bookLibraryMock.listBooksInHandsOf(libraryUser5)).thenReturn(bookInHands5List);
+        List<Book> bookInHandsList = new ArrayList<Book>();
+        when(bookLibraryMock.listBooksInHandsOf(libraryUser)).thenReturn(bookInHandsList);
         //When
-        List<Book> theListOfBookInHands0 = bookLibraryMock.listBooksInHandsOf(libraryUser0);
-        List<Book> theListOfBookInHands1 = bookLibraryMock.listBooksInHandsOf(libraryUser1);
-        List<Book> theListOfBookInHands5 = bookLibraryMock.listBooksInHandsOf(libraryUser5);
+        List<Book> theListOfBookInHands0 = bookLibraryMock.listBooksInHandsOf(libraryUser);
         //Then
         assertEquals(0, theListOfBookInHands0.size());
-        assertEquals(1, theListOfBookInHands1.size());
-        assertEquals(5, theListOfBookInHands5.size());
     }
+    @Test
+    public void testListBooksInHandsOfConditionOne() {
+        //Given
+        BookLibrary bookLibraryMock = mock(BookLibrary.class);
+        LibraryUser libraryUser = new LibraryUser("John", "Smith", "2345");
+        bookLibraryMock.listBooksInHandsOf(libraryUser);
+
+        List<Book> bookInHandsList = new ArrayList<Book>();
+        bookInHandsList = generateListNBooksInHands(1);
+        when(bookLibraryMock.listBooksInHandsOf(libraryUser)).thenReturn(bookInHandsList);
+        //When
+        List<Book> theListOfBookInHands0 = bookLibraryMock.listBooksInHandsOf(libraryUser);
+        //Then
+        assertEquals(1, theListOfBookInHands0.size());
+    }
+    @Test
+    public void testListBooksInHandsOfConditionFive() {
+        //Given
+        BookLibrary bookLibraryMock = mock(BookLibrary.class);
+        LibraryUser libraryUser = new LibraryUser("John", "Smith", "2345");
+        bookLibraryMock.listBooksInHandsOf(libraryUser);
+
+        List<Book> bookInHandsList = new ArrayList<Book>();
+        bookInHandsList = generateListNBooksInHands(5);
+        when(bookLibraryMock.listBooksInHandsOf(libraryUser)).thenReturn(bookInHandsList);
+        //When
+        List<Book> theListOfBookInHands0 = bookLibraryMock.listBooksInHandsOf(libraryUser);
+        //Then
+        assertEquals(5, theListOfBookInHands0.size());
+    }
+
 }

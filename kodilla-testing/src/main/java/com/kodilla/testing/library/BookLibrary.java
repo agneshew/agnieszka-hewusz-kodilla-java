@@ -22,7 +22,6 @@ public class BookLibrary {
         List<Book> bookInHandsList = new ArrayList<>();
         Book book = new Book("The book title", "The book author", 2000);
         bookInHandsList.add(book);
-
         return bookInHandsList;
     }
 }
