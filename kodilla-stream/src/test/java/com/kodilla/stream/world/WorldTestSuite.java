@@ -43,7 +43,6 @@ public class WorldTestSuite {
                 .stream()
                 .flatMap(c->c.getCountrySet().stream())
                 .collect(Collectors.toList());
-        //When
         BigDecimal totalPeople = countries.stream()
                 .map(Country::getPeopleQuantity)
                 .reduce(BigDecimal.ZERO, BigDecimal::add);
