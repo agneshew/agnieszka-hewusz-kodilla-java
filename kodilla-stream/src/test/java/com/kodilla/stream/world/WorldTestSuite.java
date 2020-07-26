@@ -5,9 +5,7 @@ import org.junit.Test;
 
 import java.math.BigDecimal;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 
 public class WorldTestSuite {
     @Test
@@ -21,7 +19,7 @@ public class WorldTestSuite {
         europeanCountries.add(germany);
 
         Continent europe = new Continent();
-        europe.setSountrySet(europeanCountries);
+        europe.setCountrySet(europeanCountries);
 
         Country japan = new Country("Japan", BigDecimal.valueOf(126_000_000));
         Country thailand = new Country("Thailnad", BigDecimal.valueOf(69_000_000));
@@ -31,7 +29,7 @@ public class WorldTestSuite {
         asianCountries.add(thailand);
 
         Continent asia = new Continent();
-        asia.setSountrySet(asianCountries);
+        asia.setCountrySet(asianCountries);
 
         World world = new World();
         Set<Continent> continents = new HashSet<>();
@@ -39,14 +37,7 @@ public class WorldTestSuite {
         continents.add(asia);
         world.setContinentsOnTheWorld(continents);
         //When
-        List<Country> countries = world.getContinentsOnTheWorld()
-                .stream()
-                .flatMap(c->c.getCountrySet().stream())
-                .collect(Collectors.toList());
-        BigDecimal totalPeople = countries.stream()
-                .map(Country::getPeopleQuantity)
-                .reduce(BigDecimal.ZERO, BigDecimal::add);
-        //Then
+        BigDecimal totalPeople = world.getPeopleQuantity();
         BigDecimal expectedPeople = new BigDecimal(316_000_000);
         Assert.assertEquals(expectedPeople, totalPeople);
     }

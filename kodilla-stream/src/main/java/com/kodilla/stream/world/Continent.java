@@ -11,7 +11,7 @@ public final class Continent {
         return countrySet;
     }
 
-    public void setSountrySet(Set<Country> countrySet){
+    public void setCountrySet(Set<Country> countrySet){
         this.countrySet = countrySet;
     }
 }
