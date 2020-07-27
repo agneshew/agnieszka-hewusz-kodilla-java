@@ -1,9 +1,7 @@
 package com.kodilla.stream.array;
 
+import org.junit.Assert;
 import org.junit.Test;
-
-import java.util.Arrays;
-import java.util.stream.IntStream;
 
 public class ArrayOperationsTestSuite {
 //    public ArrayOperations arrayOperations;
@@ -13,13 +11,13 @@ public class ArrayOperationsTestSuite {
     @Test
     public void testGetAverage() {
         //Given
-        int[] arrayToTest = {2,3,4,5,6,7,8,1,2,3,2,3,4,5,6,7,8,1,2,3};
+        //int[] numbers = {2,3,4,5,6,7,8,1,2,3,2,3,4,5,6,7,8,1,2,3};
+        int[] numbers = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
         //When
-        IntStream printStream = IntStream.range(0, arrayToTest.length);
-        int[] arr = printStream.toArray();
-        System.out.println(Arrays.toString(arr));
+        double realAverage = ArrayOperations.getAverage(numbers);
         //Then
-        //arrayToTest = ArrayOperations.getAverage(arrayToTest[]);
+        double expectedAverage = 1;
+        Assert.assertEquals(expectedAverage, realAverage, 0);
 
     }
 }
