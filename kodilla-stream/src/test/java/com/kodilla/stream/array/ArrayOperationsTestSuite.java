@@ -11,8 +11,7 @@ public class ArrayOperationsTestSuite {
     @Test
     public void testGetAverage() {
         //Given
-        //int[] numbers = {2,3,4,5,6,7,8,1,2,3,2,3,4,5,6,7,8,1,2,3};
-        int[] numbers = {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+        int[] numbers = new int[] {1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
         //When
         double realAverage = ArrayOperations.getAverage(numbers);
         //Then
