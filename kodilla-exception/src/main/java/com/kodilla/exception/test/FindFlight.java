@@ -15,7 +15,7 @@ public class FindFlight {
             throw new RouteNotFoundException();
         }
         else {
-            System.out.println("Have a nice flight :)");
+            System.out.println("Your airports are on map.");
         }
         System.out.println("Done!");
     }
