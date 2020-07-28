@@ -13,10 +13,10 @@ public class FindFlight {
 
         if (!(mapFlight.containsKey(Flight.departureAirport) && mapFlight.containsKey(Flight.arrivalAirport))) {
             throw new RouteNotFoundException();
-        }
+            }
         else {
-            System.out.println("Your airports are on map.");
-        }
+            System.out.println("Your airports are on map :)");
+            }
         System.out.println("Done!");
     }
 
