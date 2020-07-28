@@ -6,7 +6,7 @@ public class FlightMain {
         FindFlight newRoute = new FindFlight();
 
         try {
-            newRoute.findFlight(new Flight("WAW", "GDN"));
+            newRoute.findFlight(new Flight("GDN", "GDN"));
         }
         catch (RouteNotFoundException e) {
             System.out.println("Exception!");

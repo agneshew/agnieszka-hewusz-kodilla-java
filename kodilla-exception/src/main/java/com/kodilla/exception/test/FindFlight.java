@@ -10,8 +10,10 @@ public class FindFlight {
         Map<String, Boolean> mapFlight = new HashMap<>();
         mapFlight.put("GDN", true);
         mapFlight.put("WAW", false);
+        mapFlight.put("KRA", false);
 
-        if (!(mapFlight.containsKey(Flight.departureAirport) && mapFlight.containsKey(Flight.arrivalAirport))) {
+
+        if (!(mapFlight.containsKey(flight.getDepartureAirport()) && mapFlight.containsKey(flight.getArrivalAirport()))) {
             throw new RouteNotFoundException();
             }
         else {
