@@ -3,12 +3,10 @@ package com.kodilla.good.patterns.food2door;
 public class OrderRequest {
     private Producer producer;
     private Product product;
-    final ExtraFoodShop extraFoodShop;
 
-    public OrderRequest(Producer producer, Product product, ExtraFoodShop extraFoodShop) {
+    public OrderRequest(Producer producer, Product product) {
         this.producer = producer;
         this.product = product;
-        this.extraFoodShop = extraFoodShop;
     }
 
     public Producer getProducer() {
@@ -17,7 +15,15 @@ public class OrderRequest {
     public Product getProduct() {
         return product;
     }
-    public ExtraFoodShop getExtraFoodShop() {
-        return extraFoodShop;
-    }
+
+    Shop shop = new ExtraFoodShop() {
+        @Override
+        public boolean process(int leadTimeInDays, double commission) {
+            leadTimeInDays = 14;
+            commission = 2.45;
+            return true;
+        }
+    };
+
+
 }

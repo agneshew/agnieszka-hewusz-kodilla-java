@@ -1,19 +1,12 @@
 package com.kodilla.good.patterns.food2door;
 
-public class ExtraFoodShop extends Order{
+public class ExtraFoodShop implements Shop {
 
     Producer extraFoodShop = new Producer("ExtraFoodShop", "123 New York");
 
+    @Override
     public boolean process(int leadTimeInDays, double commission) {
-        leadTimeInDays = 14;
-        commission = 2.45;
-
-        return true;
+        return false;
     }
-
-    public Producer getExtraFoodShop() {
-        return extraFoodShop;
-    }
-
 }
 
