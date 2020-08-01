@@ -5,7 +5,6 @@ public class OrderRequest {
     private Product product;
     final ExtraFoodShop extraFoodShop;
 
-
     public OrderRequest(Producer producer, Product product, ExtraFoodShop extraFoodShop) {
         this.producer = producer;
         this.product = product;
@@ -15,11 +14,9 @@ public class OrderRequest {
     public Producer getProducer() {
         return producer;
     }
-
     public Product getProduct() {
         return product;
     }
-
     public ExtraFoodShop getExtraFoodShop() {
         return extraFoodShop;
     }
