@@ -16,14 +16,5 @@ public class OrderRequest {
         return product;
     }
 
-    Shop shop = new ExtraFoodShop() {
-        @Override
-        public boolean process(int leadTimeInDays, double commission) {
-            leadTimeInDays = 14;
-            commission = 2.45;
-            return true;
-        }
-    };
-
 
 }

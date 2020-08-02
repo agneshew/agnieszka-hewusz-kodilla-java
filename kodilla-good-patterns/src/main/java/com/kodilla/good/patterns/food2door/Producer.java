@@ -8,7 +8,6 @@ public class Producer {
         this.producerName = producerName;
         this.producerAddress = producerAddress;
     }
-
     public String getProducerName() {
         return producerName;
     }
