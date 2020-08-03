@@ -8,4 +8,16 @@ public class OrderRequest {
         this.producer = producer;
         this.product = product;
     }
+
+    public Producer getProducer() {
+        return producer;
+    }
+
+    public Product getProduct() {
+        return product;
+    }
+
+    boolean process(int leadTimeInDays){
+        return true;
+    }
 }
