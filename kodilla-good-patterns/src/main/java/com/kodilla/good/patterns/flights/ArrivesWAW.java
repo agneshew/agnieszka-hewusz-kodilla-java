@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ArrivesWAW {
 
-    private List<String> arrivesWAW = Arrays.asList("GDN", "KRK", "WRO", "LUZ");
+    private List<String> arrivesWAW = Arrays.asList("KRK", "WRO", "LUZ");
 
     public List<String> getArrivesWAW() {
         return arrivesWAW;
