@@ -31,7 +31,6 @@ public class FlightsSearch {
                     .filter(e -> e.getArrival().contains(by))
                     .filter(e ->e.getDeparture().contains(to))
                     .collect(Collectors.toList());
-
             list1.addAll(list2);
             System.out.println(list1);
         }
