@@ -13,4 +13,11 @@ public class Flights {
     public List<Flight> getFlights() {
         return flights;
     }
+
+    @Override
+    public String toString() {
+        return "Flights{" +
+                "flights=" + flights +
+                '}';
+    }
 }
