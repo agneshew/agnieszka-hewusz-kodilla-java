@@ -23,7 +23,7 @@ public class SpringRunnerTestSuite {
         //When
         String name = shape.getShapeName();
         //Then
-        Assert.assertEquals("This is a circle", name);
+        Assert.assertEquals("This is a circle.", name);
     }
 
     @Test
