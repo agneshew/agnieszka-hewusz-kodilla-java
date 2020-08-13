@@ -10,16 +10,20 @@ public class Calculator {
     private Display display;
 
     public Double add(double a, double b) {
-        return display.displayValue(a+b);
+        display.displayValue(2);
+        return (a+b);
     }
     public Double sub(double a, double b) {
-        return display.displayValue(a-b);
+        display.displayValue(2);
+        return (a-b);
     }
     public Double mul(double a, double b) {
-        return display.displayValue(a*b);
+        display.displayValue(2);
+        return (a*b);
     }
     public Double div(double a, double b) {
-        return display.displayValue(a/b);
+        display.displayValue(2);
+        return (a/b);
     }
 
 
