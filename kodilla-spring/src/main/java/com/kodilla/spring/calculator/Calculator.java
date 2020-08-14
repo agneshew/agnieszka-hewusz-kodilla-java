@@ -29,6 +29,4 @@ public class Calculator {
         display.displayValue(div);
         return (div);
     }
-
-
 }
