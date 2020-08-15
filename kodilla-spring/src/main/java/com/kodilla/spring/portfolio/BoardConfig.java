@@ -9,17 +9,17 @@ public class BoardConfig {
 
     TaskList taskList;
 
-    @Qualifier("toDo")
+   //@Qualifier("toDoList")
     @Bean
     public Board toDoList() {
         return new Board(taskList);
     }
-    @Qualifier("inProgress")
+    //@Qualifier("inProgress")
     @Bean
     public Board inProgressList() {
         return new Board(taskList);
     }
-    @Qualifier("doneList")
+    //@Qualifier("doneList")
     @Bean
     public Board doneList() {
         return new Board(taskList);
