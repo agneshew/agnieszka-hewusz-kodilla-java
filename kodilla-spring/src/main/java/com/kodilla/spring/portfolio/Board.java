@@ -7,6 +7,4 @@ public class Board {
 
     public Board(TaskList taskList) {
     }
-
-
 }

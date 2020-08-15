@@ -1,6 +1,5 @@
 package com.kodilla.spring.portfolio;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -9,18 +8,15 @@ public class BoardConfig {
 
     TaskList taskList;
 
-   //@Qualifier("toDoList")
-    @Bean
+    @Bean(name = "toDoList")
     public Board toDoList() {
         return new Board(taskList);
     }
-    //@Qualifier("inProgress")
-    @Bean
+    @Bean(name = "inProgress")
     public Board inProgressList() {
         return new Board(taskList);
     }
-    //@Qualifier("doneList")
-    @Bean
+    @Bean(name = "doneList")
     public Board doneList() {
         return new Board(taskList);
     }
