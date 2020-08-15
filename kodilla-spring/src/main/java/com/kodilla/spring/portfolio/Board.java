@@ -8,7 +8,5 @@ public class Board {
     public Board(TaskList taskList) {
     }
 
-    public void addTask() {
 
-    }
 }
