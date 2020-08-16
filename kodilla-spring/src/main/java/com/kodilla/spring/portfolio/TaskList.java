@@ -5,13 +5,9 @@ import java.util.List;
 
 public class TaskList {
 
-    private List<String> tasks;
+    public List<String> tasks;
 
     public TaskList () {
         tasks = new ArrayList<>();
-    }
-    public TaskList addTask(String s) {
-        tasks.add(s);
-        return (TaskList) tasks;
     }
 }

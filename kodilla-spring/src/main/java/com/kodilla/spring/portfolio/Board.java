@@ -5,10 +5,9 @@ public class Board {
     public TaskList inProgressList;
     public TaskList doneList;
 
-    public TaskList taskList;
-
-    public Board(TaskList taskList) {
-        this.taskList = taskList;
-
+    public Board() {
+        toDoList = new TaskList();
+        inProgressList = new TaskList();
+        doneList = new TaskList();
     }
 }
