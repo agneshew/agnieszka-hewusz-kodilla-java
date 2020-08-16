@@ -5,7 +5,7 @@ public class Board {
     public TaskList inProgressList;
     public TaskList doneList;
 
-    public Board() {
+    public Board(TaskList taskList) {
         toDoList = new TaskList();
         inProgressList = new TaskList();
         doneList = new TaskList();
