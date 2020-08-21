@@ -11,11 +11,11 @@ public class TaskFactoryTestSuite {
         //Given
         TaskFactory factory = new TaskFactory();
         //When
-        Task DrivingTask = factory.makeTask(TaskFactory.DRIVING);
+        Task drivingTask = factory.makeTask(TaskFactory.DRIVING);
         //Then
-        Assert.assertEquals(true, DrivingTask.isTaskExecuted());
-        Assert.assertEquals("Task is executing", DrivingTask.executeTask());
-        Assert.assertEquals("My route", DrivingTask.getTaskName());
+        Assert.assertEquals(true, drivingTask.isTaskExecuted());
+        Assert.assertEquals("Task is executing", drivingTask.executeTask());
+        Assert.assertEquals("My route", drivingTask.getTaskName());
     }
 
     @Test
@@ -23,11 +23,11 @@ public class TaskFactoryTestSuite {
         //Given
         TaskFactory factory = new TaskFactory();
         //When
-        Task PaintingTask = factory.makeTask(TaskFactory.PAINTING);
+        Task paintingTask = factory.makeTask(TaskFactory.PAINTING);
         //Then
-        Assert.assertEquals(true, PaintingTask.isTaskExecuted());
-        Assert.assertEquals("Task is executing", PaintingTask.executeTask());
-        Assert.assertEquals("Abstract", PaintingTask.getTaskName());
+        Assert.assertEquals(true, paintingTask.isTaskExecuted());
+        Assert.assertEquals("Task is executing", paintingTask.executeTask());
+        Assert.assertEquals("Abstract", paintingTask.getTaskName());
     }
 
     @Test
@@ -35,10 +35,10 @@ public class TaskFactoryTestSuite {
         //Given
         TaskFactory factory = new TaskFactory();
         //When
-        Task ShoppingTask = factory.makeTask(TaskFactory.SHOPPING);
+        Task shoppingTask = factory.makeTask(TaskFactory.SHOPPING);
         //Then
-        Assert.assertEquals(true, ShoppingTask.isTaskExecuted());
-        Assert.assertEquals("Task is executing", ShoppingTask.executeTask());
-        Assert.assertEquals("Dairy shopping", ShoppingTask.getTaskName());
+        Assert.assertEquals(true, shoppingTask.isTaskExecuted());
+        Assert.assertEquals("Task is executing", shoppingTask.executeTask());
+        Assert.assertEquals("Dairy shopping", shoppingTask.getTaskName());
     }
 }
