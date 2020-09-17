@@ -45,7 +45,7 @@ public class Item {
     }
 
     @ManyToOne
-    @JoinColumn(name = "PRODUCT")
+    @JoinTable(name = "PRODUCT")
     public BigDecimal getPrice() {
         return price;
     }
