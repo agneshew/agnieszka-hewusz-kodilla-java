@@ -44,8 +44,8 @@ public class Item {
         this.product = product;
     }
 
-    @ManyToOne
-    @JoinTable(name = "PRODUCT")
+    @OneToOne
+    @JoinColumn(name = "NAME")
     public BigDecimal getPrice() {
         return price;
     }
