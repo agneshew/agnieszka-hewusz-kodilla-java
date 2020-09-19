@@ -1,5 +1,7 @@
 package com.kodilla.hibernate.invoice;
 
+import com.kodilla.hibernate.task.Task;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
@@ -35,8 +37,12 @@ public class Invoice {
         return number;
     }
 
-    @OneToMany
-    @JoinTable(name = "ITEM")
+    @OneToMany(
+            targetEntity = Item.class,
+            mappedBy = "invoice",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
     public List<Item> getItems() {
         return items;
     }
