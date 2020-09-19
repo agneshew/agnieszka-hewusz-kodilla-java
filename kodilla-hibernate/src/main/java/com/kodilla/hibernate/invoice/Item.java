@@ -31,17 +31,15 @@ public class Item {
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
 
     @ManyToOne
-    @JoinColumn(name = "PRODUCT_NAME")
+    @JoinColumn (name = "PRODUCT_ID")
     public Product getProduct() {
         return product;
     }
-
     public void setProduct(Product product) {
         this.product = product;
     }
@@ -50,7 +48,6 @@ public class Item {
     public BigDecimal getPrice() {
         return price;
     }
-
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
@@ -59,7 +56,6 @@ public class Item {
     public int getQuantity() {
         return quantity;
     }
-
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
@@ -68,7 +64,6 @@ public class Item {
     public BigDecimal getValue() {
         return value;
     }
-
     public void setValue(BigDecimal value) {
         this.value = value;
     }

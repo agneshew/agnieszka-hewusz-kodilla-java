@@ -24,15 +24,16 @@ public class InvoiceDaoTestSuite {
         //Given
         Product product = new Product("Apple");
         Product product1 = new Product("Pear");
+
         Item item = new Item(product, new BigDecimal("6.80"), 2, new BigDecimal (13.60));
         Item item1 = new Item(product1, new BigDecimal("12"), 3, new BigDecimal (36));
+
         item.setProduct(product);
         item1.setProduct(product1);
+
         Invoice invoice = new Invoice(NUMBER);
         invoice.getItems().add(item);
         invoice.getItems().add(item1);
-        item.setProduct(product);
-        item1.setProduct(product1);
 
         //When
         invoiceDao.save(invoice);
@@ -44,6 +45,4 @@ public class InvoiceDaoTestSuite {
         //CleanUp
         invoiceDao.deleteById(id);
     }
-
-
 }
