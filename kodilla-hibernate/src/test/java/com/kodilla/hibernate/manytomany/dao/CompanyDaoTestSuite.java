@@ -57,10 +57,10 @@ public class CompanyDaoTestSuite {
 
         //CleanUp
         //try {
-            companyDao.deleteById(softwareMachineId);
-            companyDao.deleteById(dataMaestersId);
-            companyDao.deleteById(greyMatterId);
-        //} catch (Exception e) {
+//            companyDao.deleteById(softwareMachineId);
+//            companyDao.deleteById(dataMaestersId);
+//            companyDao.deleteById(greyMatterId);
+//        //} catch (Exception e) {
         //    //do nothing
         //}
     }
@@ -93,9 +93,9 @@ public class CompanyDaoTestSuite {
         int dataMaestersId = dataMaesters.getId();
         companyDao.save(greyMatter);
         int greyMatterId = greyMatter.getId();
-//        employeeDao.save(johnSmith);
-//        employeeDao.save(stephanieClarckson);
-//        employeeDao.save(lindaKovalsky);
+        employeeDao.save(johnSmith);
+        employeeDao.save(stephanieClarckson);
+        employeeDao.save(lindaKovalsky);
 
         //When
         List<Company> firstLetters = companyDao.retrieveFirstLetters("Sof%");
