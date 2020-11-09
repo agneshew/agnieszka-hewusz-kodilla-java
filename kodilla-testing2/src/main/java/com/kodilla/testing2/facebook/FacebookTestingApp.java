@@ -17,6 +17,8 @@ public class FacebookTestingApp {
         WebDriver driver = WebDriverConfig.getDriver(WebDriverConfig.CHROME);
         driver.get("https://www.facebook.com");
 
+        driver.findElement(By.id("Utwórz nowe konto")).submit();
+
         while (!driver.findElement(By.xpath(XPATH_SELECT_DATE_OF_BIRTH)).isDisplayed());
 
         WebElement selectComboDay = driver.findElement(By.xpath(XPATH_SELECT_DAY));
